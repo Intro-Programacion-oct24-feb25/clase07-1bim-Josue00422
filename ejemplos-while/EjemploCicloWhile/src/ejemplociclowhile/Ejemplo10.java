@@ -20,27 +20,28 @@ public class Ejemplo10 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int limite_tabla = 12;
+        int limite_tabla;
         int contador = 1;
         int operacion;
         int tabla;
         
         System.out.println("Ingrese el número de tabla a generar");
         tabla = entrada.nextInt();
-        System.out.println("Ingrese el numero de"
-                + " limites que queire que tenga la tabla");
+        System.out.println("Ingrese el numero de limites que queire"
+                + " que tenga la tabla");
         limite_tabla = entrada.nextInt();
         
         
         String cadena = ""; // cadena acumulador
         cadena = String.format("%sTabla de multiplicar\n", cadena);
         
-        while (contador <= 12){
+        while (contador <= limite_tabla){
             operacion = tabla * contador;
-            if(limite_tabla >=0){
+            if(limite_tabla <=0){
                 limite_tabla = 12;
             }else{
                 limite_tabla = limite_tabla;
+                
             }
             
             cadena = String.format("%s%d*%d=%d\n", 
