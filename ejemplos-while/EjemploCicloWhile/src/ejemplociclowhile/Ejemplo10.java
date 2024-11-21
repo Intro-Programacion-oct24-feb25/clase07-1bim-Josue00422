@@ -27,12 +27,21 @@ public class Ejemplo10 {
         
         System.out.println("Ingrese el número de tabla a generar");
         tabla = entrada.nextInt();
+        System.out.println("Ingrese el numero de"
+                + " limites que queire que tenga la tabla");
+        limite_tabla = entrada.nextInt();
+        
         
         String cadena = ""; // cadena acumulador
         cadena = String.format("%sTabla de multiplicar\n", cadena);
         
         while (contador <= 12){
             operacion = tabla * contador;
+            if(limite_tabla >=0){
+                limite_tabla = 12;
+            }else{
+                limite_tabla = limite_tabla;
+            }
             
             cadena = String.format("%s%d*%d=%d\n", 
                     cadena, 
