@@ -41,9 +41,15 @@ public class Ejemplo0811 {
             // proceso para salir del ciclo.
             System.out.println("Ingrese si para salir");
             String temporal = entrada.nextLine();
-            if (temporal.equals("si")) {
-                bandera = false;
+            switch (temporal){
+                case "si":
+                case "yes":
+                case "s":
+                case "y":
+                    bandera = false;
+                    break;
             }
+          
         }
         promedio_final = suma_total / contador;
         System.out.printf("El promedio final es %.2f\n", promedio_final);
